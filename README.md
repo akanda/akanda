@@ -18,7 +18,8 @@ packaging and management:
     appliance.
 
   * [Akanda Neutron](https://github.com/dreamhost/akanda-quantum) – User-Facing
-    REST service implemented as OpenStack Neutron API Extensions.
+    REST service implemented as OpenStack Neutron API Extensions. Additionally,
+    subclasses of the several Neutron plugins and supporting code.
 
   * [Akanda Nova](https://github.com/dreamhost/akanda-nova) – Extensions to
     OpenStack Nova supporting the creation and management of Akanda Software
