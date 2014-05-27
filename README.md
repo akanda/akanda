@@ -71,3 +71,8 @@ work on bringing Akanda to the community, we will be working on additional
 documentation, user guides, etc.
 
 Mailing lists and a project website are on the way!
+
+## License and Copyright
+
+Akanda is licensed under the Apache-2.0 license and is Copyright 2014,
+DreamHost, LLC.
