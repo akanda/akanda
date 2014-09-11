@@ -13,7 +13,7 @@ packaging and management:
 
   * [Akanda Appliance](https://github.com/dreamhost/akanda-appliance) –
     Supporting software for the Akanda Software Router appliance, which is a
-    service VM running OpenBSD and PF for providing L3+ services in a
+    service VM running Linux and IPTables for providing L3+ services in a
     virtualized network environment. This includes a REST API for managing the
     appliance.
 
