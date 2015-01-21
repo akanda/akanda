@@ -40,15 +40,13 @@ As such, this repository focuses on project overview and documentation.
 
 ### The Name
 
-We originally wanted to go with the name अनर्थक (anarthaka, "bullshit"). But
-sadly, this term also conveys things like "worthless," "useless," and
-"unprofitable." As a product (even an open source one), these are not very
-positive associations.
-
-However, we found we were able to say something more clearly and with a bevy of
-excellent synonyms by using the Sanskrit word अखण्ड (akhaNDa) which has such
-lovely connotations as "non-stop," "undivided," "entire," "whole," and most
-importantly, "**not broken**."
+Project names are a powerful tool because they can be used to bond teams,
+communicate effectively and convey the end goal. Like many projects, we
+considered many names until a member of our team sought out to find a word
+appropriate for an open project. This word enables us to say something more
+clearly and with a bevy of excellent synonyms by using the Sanskrit word
+अखण्ड (akhaNDa) which has such lovely connotations as "non-stop, "undivided,
+"entire," "whole," and most importantly, "**not broken**."
 
 ## The Akanda REST APIs
 
