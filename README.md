@@ -53,7 +53,7 @@ clearly and with a bevy of excellent synonyms by using the Sanskrit word
 Akanda comes with two REST APIs:
 
 1. The REST API that runs on the router instance itself, recieving simple
-   pf-related administrative commands (e.g., "take this data and have pf parse
+   iptables-related administrative commands (e.g., "take this data and have iptables parse
    it"). This REST API runs only so long a router instance is up and running.
    This is not the user-facing, 24/7 REST API.
 
