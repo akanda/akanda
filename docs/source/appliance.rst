@@ -1,12 +1,14 @@
 .. _appliance:
 
-Virtual Software Router (the Akanda Appliance)
-==============================================
+The Service VM (the Akanda Appliance)
+=====================================
 
-Akanda uses Linux-based software router images (stored in OpenStack Glance)
-to provide layer 3 routing and advanced networking services.  While it's
-possible to build your own custom image, Akanda provides stable image releases
-for download at `akanda.io <http://akanda.io>`_.
+Akanda uses Linux-based images (stored in OpenStack Glance) to provide layer
+3 routing and advanced networking services.  Akanda, Inc provides stable image
+releases for download at `akanda.io <http://akanda.io>`_, but it's also
+possible to build your own custom Service VM image (running additional
+services of your own on top of the routing and other default services provided
+by Akanda).
 
 .. _appliance_rest:
 

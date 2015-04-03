@@ -23,8 +23,8 @@ several event types:
     * ``UPDATE`` - services on a router need to be reconfigured
     * ``DELETE`` - a router was deleted
     * ``POLL`` - used by the :ref:`health monitor<health>` for checking aliveness
-      of a router VM
-    * ``REBUILD`` - a router VM should be destroyed and recreated
+      of a Service VM
+    * ``REBUILD`` - a Service VM should be destroyed and recreated
 
 As events are normalized and shuttled onto the :py:mod:`multiprocessing.Queue`,
 :py:mod:`akanda.rug.scheduler` shards (by Tenant ID, by default) and
@@ -57,32 +57,32 @@ State Machine Flow
 The supported states in the state machine are:
 
     :CalcAction: The entry point of the state machine.  Depending on the
-        current status of the router VM (e.g., ``ACTIVE``, ``BUILD``, ``SHUTDOWN``)
+        current status of the Service VM (e.g., ``ACTIVE``, ``BUILD``, ``SHUTDOWN``)
         and the current event, determine the first step in the state machine to
         transition to.
 
-    :Alive: Check aliveness of the router VM by attempting to communicate with
+    :Alive: Check aliveness of the Service VM by attempting to communicate with
         it via its REST HTTP API.
     
-    :CreateVM: Call ``nova boot`` to boot a new router VM.  This will attempt
-        to boot a router VM up to a (configurable) number of times before
+    :CreateVM: Call ``nova boot`` to boot a new Service VM.  This will attempt
+        to boot a Service VM up to a (configurable) number of times before
         placing the router into ``ERROR`` state.
     
     :CheckBoot: Check aliveness (up to a configurable number of seconds) of the
         router until the VM is responsive and ready for initial configuration.
     
-    :ConfigureVM: Configure the router VM and its services.  This is generally
+    :ConfigureVM: Configure the Service VM and its services.  This is generally
         the final step in the process of booting and configuring a router.  This
         step communicates with the Neutron API to generate a comprehensive network
         configuration for the router (which is pushed to the router via its REST
         API).  On success, the state machine yields control back to the worker
         thread and that thread handles the next event in its queue (likely for
-        a different router VM and its state machine).
+        a different Service VM and its state machine).
     
-    :ReglugVM: Attempt to hot-plug/unplug a network from the router via ``nova
+    :ReplugVM: Attempt to hot-plug/unplug a network from the router via ``nova
         interface-attach`` or ``nova-interface-detach``.
 
-    :StopVM: Terminate a running router VM.  This is generally performed when
+    :StopVM: Terminate a running Service VM.  This is generally performed when
         a Neutron router is deleted or via explicit operator tools.
 
     :ClearError: After a (configurable) number of ``nova boot`` failures, Neutron

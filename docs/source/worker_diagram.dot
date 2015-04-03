@@ -18,9 +18,9 @@ digraph sample_boot {
       "Worker 1" -> "Thread N"
   }
 
-  "Thread 1" -> "Router VM 1";
-  "Thread 1" -> "Router VM ..." [ label = "Appliance REST API" ];
-  "Thread 1" -> "Router VM N";
+  "Thread 1" -> "Service VM 1";
+  "Thread 1" -> "Service VM ..." [ label = "Appliance REST API" ];
+  "Thread 1" -> "Service VM N";
 
   "Thread 1" -> "Nova" [ label = "Nova API" ];
   "Thread 1" -> "Neutron" [ label = "Neutron API" ];

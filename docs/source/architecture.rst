@@ -40,7 +40,7 @@ From an architectural perspective, Akanda is composed of a few subprojects:
       a replacement for Neutron's various L3-L7 agents by listening for
       Neutron AMQP events and coalescing them into software
       router API calls (which configure and manage embedded services on the
-      router VM).  Additionally, :py:mod:`akanda-rug` contains a health monitoring
+      Service VM).  Additionally, :py:mod:`akanda-rug` contains a health monitoring
       component which monitors health and guarantees uptime for existing
       software routers.
 
@@ -73,7 +73,7 @@ transitions, modifying its virtualized router in a variety of ways, such as:
     * Booting a virtual machine for the router via the Nova API (if one doesn't
       exist).
     * Checking for aliveness of the router via the :ref:`REST API
-      <appliance_rest>` on the router VM.
+      <appliance_rest>` on the Service VM.
     * Pushing configuration updates via the :ref:`REST API
       <appliance_rest>` to configure routing
       and manage services (such as ``iptables``, ``dnsmasq``, ``bird6``,
