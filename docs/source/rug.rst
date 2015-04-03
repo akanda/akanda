@@ -1,7 +1,7 @@
 .. _rug:
 
-Router Orchestration and Management
-===================================
+Service VM Orchestration and Management
+=======================================
 
 RUG - Router Update Generator
 -----------------------------
