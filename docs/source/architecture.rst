@@ -15,7 +15,7 @@ as a service):
 .. image:: _static/neutron-canonical.png
 
 When we add Akanda into the mix, we're able to replace these agents with
-a virtualized software router that manages layer 3 routing and other advanced
+a virtualized Service VM that manages layer 3 routing and other advanced
 networking services, significantly lowering the barrier of entry for operators
 (in terms of deployment, monitoring and management):
 
@@ -36,13 +36,13 @@ From an architectural perspective, Akanda is composed of a few subprojects:
     * | :ref:`akanda-rug <rug>`
 
       A service for managing the creation, configuration, and health of Akanda
-      Software Routers in an OpenStack cloud.  The :py:mod:`akanda-rug` acts in part as
+      Serivce VMs in an OpenStack cloud.  The :py:mod:`akanda-rug` acts in part as
       a replacement for Neutron's various L3-L7 agents by listening for
       Neutron AMQP events and coalescing them into software
       router API calls (which configure and manage embedded services on the
       Service VM).  Additionally, :py:mod:`akanda-rug` contains a health monitoring
       component which monitors health and guarantees uptime for existing
-      software routers.
+      Service VMs.
 
     * | :ref:`akanda-appliance <appliance>`
 
