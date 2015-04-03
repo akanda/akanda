@@ -12,7 +12,7 @@ OpenStack operators for real OpenStack clouds. Originally developed by
 `DreamCompute <https://dreamhost.com/compute/cloud>`_, Akanda eliminates the
 need for complex SDN controllers, overlays, and multiple plugins by providing
 a simple integrated networking stack (routing, firewall, and load balancing via
-a :ref:`virtual software router <appliance>`) for connecting and securing
+a :ref:`virtual Service VM <appliance>`) for connecting and securing
 multi-tenant OpenStack environments.
 
 Narrative Documentation
