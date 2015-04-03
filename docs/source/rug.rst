@@ -79,7 +79,7 @@ The supported states in the state machine are:
         thread and that thread handles the next event in its queue (likely for
         a different router VM and its state machine).
     
-    :ReglugVM: Attempt to hot-plug/unplug a network from the router via ``nova
+    :ReplugVM: Attempt to hot-plug/unplug a network from the router via ``nova
         interface-attach`` or ``nova-interface-detach``.
 
     :StopVM: Terminate a running router VM.  This is generally performed when
