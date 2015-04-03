@@ -62,7 +62,7 @@ a running :py:mod:`akanda.rug` via AMQP::
     and places the tenant back under akanda-rug management.
 
     $ rug-ctl ssh <router-id>
-    Establishes an ssh connection with a specified router VM.
+    Establishes an ssh connection with a specified Service VM.
 
     $ rug-ctl workers debug
     Causes the rug to print debugging diagnostics about the
@@ -77,7 +77,7 @@ analyze the state machine flow of any router and step through its operation
 using Python's debugger.  This is particularly useful for development purposes
 and understanding the nature of the :py:mod:`akanda.rug` state machine, but it's
 also useful for debugging problematic routers as an operator; a common pattern
-for determining why a router VM won't boot is to place the router in `debug
+for determining why a Service VM won't boot is to place the router in `debug
 mode`::
 
     $ rug-ctl router debug <router-id>
